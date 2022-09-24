@@ -3,14 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     text-transform: none;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #16003C 2.01%, #18033B 100%, #16003B 100%);
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    /* background: linear-gradient(to top, #250060 5%, #1A0145 100%); */
 }
 
 a, a::before, a::after {
@@ -20,4 +31,5 @@ a, a::before, a::after {
 img {
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
