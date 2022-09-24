@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Futura-admin/static/css/main.ac66e0ec.css",
+    "main.js": "/Futura-admin/static/js/main.1cb15b31.js",
+    "index.html": "/Futura-admin/index.html",
+    "main.ac66e0ec.css.map": "/Futura-admin/static/css/main.ac66e0ec.css.map",
+    "main.1cb15b31.js.map": "/Futura-admin/static/js/main.1cb15b31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac66e0ec.css",
+    "static/js/main.1cb15b31.js"
+  ]
+}
