@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/Achyut-0705/Futura-admin.git"
   },
-  "homepage": "https://Achyut-0705.github.io/Futura-admin",
+  "homepage": "https://achyut-0705.github.io/Futura-admin",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
