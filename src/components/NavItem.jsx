@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 
 function NavItem({ title = "Home", link = "#" }) {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <div className={styles.container}>
       <span className={`${location.pathname === link ? styles.active : ""}`} />
