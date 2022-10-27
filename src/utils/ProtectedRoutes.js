@@ -1,11 +1,12 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useContext } from "react";
-import { GlobalContext } from "../App";
+// import { useContext } from "react";
+// import { GlobalContext } from "../App";
 
 const ProtectedRoutes = () => {
-  const user = useContext(GlobalContext);
-  // const isLogged = false;
-  return user === null ? <Outlet /> : <Navigate to="/login" />;
+  // const { token } = useContext(GlobalContext);
+  // console.log(token);
+  const token = localStorage.getItem("token");
+  return token !== null ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoutes;
