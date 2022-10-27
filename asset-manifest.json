@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Futura-admin/static/css/main.ad7fbbb5.css",
-    "main.js": "/Futura-admin/static/js/main.be2a69f2.js",
+    "main.js": "/Futura-admin/static/js/main.f059f3c7.js",
     "static/media/rocket.svg": "/Futura-admin/static/media/rocket.36f5f56b60590db67169724422ffc77d.svg",
     "index.html": "/Futura-admin/index.html",
     "main.ad7fbbb5.css.map": "/Futura-admin/static/css/main.ad7fbbb5.css.map",
-    "main.be2a69f2.js.map": "/Futura-admin/static/js/main.be2a69f2.js.map"
+    "main.f059f3c7.js.map": "/Futura-admin/static/js/main.f059f3c7.js.map"
   },
   "entrypoints": [
     "static/css/main.ad7fbbb5.css",
-    "static/js/main.be2a69f2.js"
+    "static/js/main.f059f3c7.js"
   ]
 }
