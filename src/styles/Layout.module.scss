@@ -1,0 +1,44 @@
+.container {
+  height: 100%;
+  display: flex;
+
+  nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: conic-gradient(
+      from -90deg at -73.24% 60.46%,
+      rgba(227, 217, 226, 0) 0deg,
+      #ffbfdd 322.65deg,
+      rgba(227, 217, 226, 0) 360deg
+    );
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: rgb(241, 201, 220);
+      li {
+        color: black;
+        text-align: center;
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0.3rem 0;
+
+        &:hover {
+          background: rgb(255, 177, 214);
+        }
+      }
+
+      li.active {
+        background: rgb(198, 2, 92);
+        color: white;
+      }
+    }
+  }
+}

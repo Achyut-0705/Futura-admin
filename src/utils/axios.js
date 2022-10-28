@@ -24,14 +24,13 @@ instance.interceptors.request.use(
   }
 );
 
-// axios.interceptors.response.use(
-//   async (res) => {
-//     const response = await res.json();
-//     return response;
-//   },
-//   (error) => {
-//     return Promise.reject(error);
-//   }
-// );
+axios.interceptors.response.use(
+  async (response) => {
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default instance;

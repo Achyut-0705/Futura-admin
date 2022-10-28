@@ -1,13 +1,8 @@
 import styles from "../styles/components/CTA.module.scss";
 
-function CTA({ text = "CTA", type = "", onClick = () => {}, ...rest }) {
+function CTA({ text = "CTA", type = "", ...rest }) {
   return (
-    <button
-      className={styles.container}
-      type={type}
-      onClick={onClick}
-      {...rest}
-    >
+    <button className={styles.container} type={type} {...rest}>
       {text}
     </button>
   );
