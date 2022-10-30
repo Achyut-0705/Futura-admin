@@ -9,6 +9,7 @@ import PendingRequests from "./pages/PendingRequests";
 import AcceptedRequest from "./pages/AcceptedRequests";
 import RejectedRequest from "./pages/RejectedRequests";
 import EditProfile from "./pages/EditProfile";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="request">
               <Route path="accepted" element={<AcceptedRequest />} />
               <Route path="rejected" element={<RejectedRequest />} />
+              <Route path="pending" element={<ProtectedRoutes />} />
             </Route>
             <Route path="profile/edit" index element={<EditProfile />} />
           </Route>

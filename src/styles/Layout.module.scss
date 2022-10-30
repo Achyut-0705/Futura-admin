@@ -1,25 +1,22 @@
+@import "../mixins/global.scss";
+
 .container {
   height: 100%;
   display: flex;
 
   nav {
+    @include flex($direction: column, $align: center);
     width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 10rem;
     background: conic-gradient(
       from -90deg at -73.24% 60.46%,
       rgba(227, 217, 226, 0) 0deg,
-      #ffbfdd 322.65deg,
+      rgb(255, 191, 221) 322.65deg,
       rgba(227, 217, 226, 0) 360deg
     );
-    position: sticky;
-    top: 0;
-    left: 0;
 
     ul {
-      display: flex;
-      flex-direction: column;
+      @include flex($direction: column, $align: center);
       gap: 0.5rem;
       background: rgb(241, 201, 220);
       li {
@@ -41,4 +38,9 @@
       }
     }
   }
+}
+
+.seperator {
+  @include flex(column, space-between, center);
+  height: 100%;
 }

@@ -28,3 +28,10 @@
   //   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   row-gap: 4rem;
 }
+
+.noData {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -50%);
+}

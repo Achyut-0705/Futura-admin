@@ -1,0 +1,80 @@
+@import "../../mixins/global.scss";
+
+.container {
+  padding: 3rem 1rem;
+  border-radius: 24px;
+  height: 100%;
+}
+
+.top {
+  height: 30%;
+  background: linear-gradient(
+    308.59deg,
+    rgb(182, 2, 198) 40.47%,
+    rgb(107, 0, 242) 120.45%
+  );
+  border-radius: 24px 24px 0 0;
+  position: relative;
+}
+
+.imageWrapper {
+  @include flexCenter;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background: rgb(37, 1, 96);
+  border-radius: 50%;
+  width: 40%;
+  //   height: 90%;
+
+  img {
+    width: 75%;
+    transform: scale(0.75);
+  }
+}
+
+.bottom {
+  //   height: 60%;
+  background: linear-gradient(
+    180deg,
+    #e4dae3 73.52%,
+    rgba(228, 218, 227, 0) 180.9%
+  );
+  border-radius: 0 0 24px 24px;
+  color: #807676;
+  @include flex(column, space-between);
+  padding: 5rem 1.5rem 3rem 1.5rem;
+  gap: 5rem;
+}
+
+.id {
+  @include flexCenter;
+  color: black;
+}
+
+.pendingDetails {
+  @include flex(column, space-between);
+  gap: 2rem;
+  height: 100%;
+}
+
+.btns {
+  @include flex($direction: space-between);
+  gap: 1rem;
+
+  button {
+    // background: #027600;
+    box-shadow: 0px 4px 250px rgba(0, 0, 0, 0.25);
+    color: white;
+    border-radius: 89px;
+    padding: 0.5rem 1rem;
+
+    &:nth-child(1) {
+      background: rgb(2, 118, 0);
+    }
+
+    &:nth-child(2) {
+      background: rgba(149, 1, 1, 1);
+    }
+  }
+}
