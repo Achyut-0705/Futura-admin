@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Futura-admin/static/css/main.35741790.css",
-    "main.js": "/Futura-admin/static/js/main.2a25220f.js",
+    "main.css": "/Futura-admin/static/css/main.cd4a41de.css",
+    "main.js": "/Futura-admin/static/js/main.189a1373.js",
     "static/media/rocket.svg": "/Futura-admin/static/media/rocket.36f5f56b60590db67169724422ffc77d.svg",
     "static/media/logo.svg": "/Futura-admin/static/media/logo.7d30604bd55922b86a7a0524a5786244.svg",
+    "static/media/defaultAvatar.png": "/Futura-admin/static/media/defaultAvatar.6ff51bd3f785c5540da5.png",
     "index.html": "/Futura-admin/index.html",
-    "main.35741790.css.map": "/Futura-admin/static/css/main.35741790.css.map",
-    "main.2a25220f.js.map": "/Futura-admin/static/js/main.2a25220f.js.map"
+    "main.cd4a41de.css.map": "/Futura-admin/static/css/main.cd4a41de.css.map",
+    "main.189a1373.js.map": "/Futura-admin/static/js/main.189a1373.js.map"
   },
   "entrypoints": [
-    "static/css/main.35741790.css",
-    "static/js/main.2a25220f.js"
+    "static/css/main.cd4a41de.css",
+    "static/js/main.189a1373.js"
   ]
 }
