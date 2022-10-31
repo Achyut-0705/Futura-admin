@@ -4,6 +4,7 @@ import { getToken } from "./auth.js";
 
 const instance = axios.create({
   baseURL: "http://13.232.250.55:8000",
+  // baseURL: "http://localhost:5000",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",

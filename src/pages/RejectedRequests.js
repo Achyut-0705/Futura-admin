@@ -1,16 +1,40 @@
 import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
 import RequestCard from "../components/RequestCard";
 import styles from "../styles/RejectedRequests.module.scss";
 import instance from "../utils/axios";
-
-const getPendingRequests = async () => {
-  const { data } = await instance.get("/company/status/rejected");
-  return data;
-};
+import { success, error } from "../utils/Toasties";
 
 function RejectedRequest() {
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
+
+  const getPendingRequests = async () => {
+    try {
+      const { data } = await instance.get("/company/status/rejected");
+      return data;
+    } catch (err) {
+      error(err.message);
+    }
+  };
+
+  const moveToPending = async (id) => {
+    try {
+      await instance.patch(`/company/status/${id}`, {
+        status: "pending",
+      });
+      // console.log(result);
+      setData((val) => {
+        const updatedData = val.filter((company) => company.id !== id);
+        return updatedData;
+      });
+      success("Company moved to pending successfully");
+    } catch (err) {
+      // console.log(err);
+      error(err.message);
+    }
+  };
+
   useEffect(() => {
     try {
       getPendingRequests()
@@ -39,12 +63,18 @@ function RejectedRequest() {
       <div className={styles.requestsWrapper}>
         {data.length > 0 ? (
           data.map((company) => (
-            <RequestCard key={company.id} company={company} />
+            <RequestCard
+              key={company.id}
+              company={company}
+              type="rejected"
+              onMoveToPending={() => moveToPending(company.id)}
+            />
           ))
         ) : (
           <div className={styles.noData}>No data found</div>
         )}
       </div>
+      <ToastContainer />
     </div>
   );
 }

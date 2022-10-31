@@ -1,8 +1,16 @@
-import defaultAvatar from "../images/defaultAvatar.png";
-
 import styles from "../styles/components/RequestCard.module.scss";
+import defaultAvatar from "../images/defaultAvatar.png";
+import CTA from "./CTA";
 
-function RequestCard({ type = "pending", id = "xxxx5678" }) {
+function RequestCard({
+  type = "pending",
+  id = "xxxx5678",
+  admin = "Admin",
+  on = "12/12/2019",
+  onAccept = () => {},
+  onReject = () => {},
+  onMoveToPending = () => {},
+}) {
   let bottom;
   if (type === "pending") {
     bottom = () => {
@@ -10,14 +18,54 @@ function RequestCard({ type = "pending", id = "xxxx5678" }) {
         <div className={styles.pendingDetails}>
           <div className={styles.id}>ID: {id}</div>
           <div className={styles.btns}>
-            <button>Accept</button>
-            <button>Decline</button>
+            <button className={styles.acceptBtn} onClick={onAccept}>
+              Accept
+            </button>
+            <button className={styles.rejectBtn} onClick={onReject}>
+              Decline
+            </button>
           </div>
         </div>
       );
     };
   } else if (type === "accepted") {
+    bottom = () => {
+      return (
+        <div className={styles.pendingDetails}>
+          <div className={styles.accepted}>
+            <div className={styles.id}>ID: {id}</div>
+            <div className={styles.id}>Accepted On: {on}</div>
+            <div className={styles.id}>Accepted By: {admin}</div>
+          </div>
+          <div className={styles.pendingBtn}>
+            <CTA
+              style={{ width: "100%" }}
+              text="Move To Pending"
+              onClick={onMoveToPending}
+            />
+          </div>
+        </div>
+      );
+    };
   } else if (type === "rejected") {
+    bottom = () => {
+      return (
+        <div className={styles.pendingDetails}>
+          <div className={styles.accepted}>
+            <div className={styles.id}>ID: {id}</div>
+            <div className={styles.id}>Accepted On: {on}</div>
+            <div className={styles.id}>Accepted By: {admin}</div>
+          </div>
+          <div className={styles.pendingBtn}>
+            <CTA
+              style={{ width: "100%" }}
+              text="Move To Pending"
+              onClick={onMoveToPending}
+            />
+          </div>
+        </div>
+      );
+    };
   }
   return (
     <div className={styles.container}>
