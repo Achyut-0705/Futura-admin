@@ -30,6 +30,7 @@ function PendingRequests() {
       success("Company Accepted Successfully");
     } catch (err) {
       error(err.message);
+      console.log(err);
     }
   };
 
