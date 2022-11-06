@@ -78,6 +78,7 @@ function PendingRequests() {
             <RequestCard
               key={company.id}
               company={company}
+              name={company.name}
               onAccept={() => onAccept(company.id)}
               onReject={() => onReject(company.id)}
             />

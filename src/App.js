@@ -8,7 +8,7 @@ import ProtectedRoute from "./utils/ProtectedRoutes";
 import PendingRequests from "./pages/PendingRequests";
 import AcceptedRequest from "./pages/AcceptedRequests";
 import RejectedRequest from "./pages/RejectedRequests";
-import EditProfile from "./pages/EditProfile";
+// import EditProfile from "./pages/EditProfile";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
               <Route path="rejected" element={<RejectedRequest />} />
               <Route path="pending" element={<ProtectedRoutes />} />
             </Route>
-            <Route path="profile/edit" index element={<EditProfile />} />
+            {/* <Route path="profile/edit" index element={<EditProfile />} /> */}
           </Route>
         </Route>
         <Route path="*" element={<Error404 />} />

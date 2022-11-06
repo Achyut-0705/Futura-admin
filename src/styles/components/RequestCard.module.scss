@@ -44,7 +44,14 @@
   color: #807676;
   @include flex(column, space-between);
   padding: 5rem 1.5rem 3rem 1.5rem;
-  gap: 5rem;
+  gap: 2rem;
+
+  h1 {
+    all: unset;
+    font-size: 2.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: capitalize;
+  }
 }
 
 .id {

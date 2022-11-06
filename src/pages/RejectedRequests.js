@@ -67,6 +67,7 @@ function RejectedRequest() {
               key={company.id}
               company={company}
               type="rejected"
+              name={company.name}
               onMoveToPending={() => moveToPending(company.id)}
             />
           ))

@@ -40,14 +40,14 @@ function Layout() {
             >
               REJECTED REQUESTS
             </li>
-            <li
+            {/* <li
               className={`${
                 activeLink === "/profile/edit" ? styles.active : ""
               }`}
               onClick={() => navigate("profile/edit")}
             >
               EDIT PROFILE
-            </li>
+            </li> */}
           </ul>
         </div>
         <CTA

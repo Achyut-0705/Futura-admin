@@ -12,6 +12,7 @@ function AcceptedRequest() {
   const getPendingRequests = async () => {
     try {
       const { data } = await instance.get("/company/status/accepted");
+      console.log(data);
       return data;
     } catch (err) {
       error(err.message);
@@ -69,6 +70,7 @@ function AcceptedRequest() {
                 key={company.id}
                 company={company}
                 type="accepted"
+                name={company.name}
                 onMoveToPending={() => moveToPending(company.id)}
               />
             ))

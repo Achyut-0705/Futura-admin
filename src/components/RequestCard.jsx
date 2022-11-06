@@ -7,6 +7,7 @@ function RequestCard({
   id = "xxxx5678",
   admin = "Admin",
   on = "12/12/2019",
+  name = "John Doe",
   onAccept = () => {},
   onReject = () => {},
   onMoveToPending = () => {},
@@ -75,6 +76,7 @@ function RequestCard({
         </div>
       </div>
       <div className={styles.bottom}>
+        <h1>{name}</h1>
         <p>
           A Brand Description. Lorem ipsum dolor sit amet, consectetur
           adipiscing elit. Vestibulum maximus orci vitae sem feugiat congue. Sed
